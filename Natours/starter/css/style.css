@@ -19,10 +19,33 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: #777;
+    padding: 30px;
 }
 
 .header {
     height: 95vh;
-    background-image: url(../img/hero.jpg);
+    /* to set gradient image on top, we can use the background-image, we want the image on top so it will go last */
+    background-image: linear-gradient(
+        to right bottom,
+        #7ed56fd8, 
+        #28b485d8), 
+        url(../img/hero.jpg);
     background-size: cover;
+    /* top of the image always stays */
+    background-position: top;
+    /* This allows the children elements to reference this element */
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box {
+    /* what is the reference to which the 40px will be rendered */
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
 }
