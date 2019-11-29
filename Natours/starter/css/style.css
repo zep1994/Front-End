@@ -49,3 +49,32 @@ body {
 .logo {
     height: 35px;
 }
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* we need to translate the center of the box into the current left of the box */
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    color: #FFF;
+    text-transform: uppercase;
+
+}
+
+.heading-primary-main {
+    /* Block elements create line breaks after the elements and span elements are inline by default */
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+}
